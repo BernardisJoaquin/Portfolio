@@ -120,18 +120,18 @@
 
     .nav-middle a:hover { color: var(--fg); }
 
-    /*(Sobre mí / Contacto)*/
+    /* (Sobre mí / Contacto) */
     .nav-bottom {
       display: flex;
       justify-content: center;
       gap: 4rem;
-      padding-bottom: 2.5rem;
+      padding-bottom: 12vh; /* <-- Aumentamos este valor (antes 2.5rem) para subir los menús */
       opacity: 0;
       animation: fadeUp 0.9s ease 0.5s forwards;
     }
 
     .nav-bottom a {
-      font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+      font-size: clamp(1rem, 2.5vw, 1.4rem); /* <-- Ahora es exactamente igual a .nav-middle a */
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--muted);
