@@ -27,8 +27,8 @@
       font-weight: 300;
       min-height: 100vh;
       display: grid;
-      grid-template-rows: auto auto auto auto;
-      padding: 0 2.5rem 2rem;
+      grid-template-rows: auto 1fr auto auto;
+      padding: 2rem 2.5rem;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -38,7 +38,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 2rem;
     }
 
     .location {
@@ -79,8 +78,6 @@
       justify-content: center;
       text-align: center;
       gap: 0.6rem;
-      padding-top: 25vh;
-      padding-bottom: 3rem;
     }
 
     h1 {
@@ -94,7 +91,7 @@
       animation: fadeUp 0.9s ease 0.1s forwards;
     }
 
-    /*Director de cine*/
+     /*Director de cine*/
     .subtitle {
       font-size: 13px;
       letter-spacing: 0.35em;
@@ -108,13 +105,13 @@
     .nav-middle {
       display: flex;
       justify-content: center;
-      padding: 1rem 0 0.3rem;
+      padding: 1rem 0 1rem;
       opacity: 0;
       animation: fadeUp 0.9s ease 0.4s forwards;
     }
 
     .nav-middle a {
-      font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--muted);
@@ -128,7 +125,6 @@
       display: flex;
       justify-content: center;
       gap: 4rem;
-      padding-top: 0.3rem;
       padding-bottom: 2.5rem;
       opacity: 0;
       animation: fadeUp 0.9s ease 0.5s forwards;
@@ -150,13 +146,13 @@
     }
 
     @media (max-width: 600px) {
-      body { padding: 0 1.5rem 1.5rem; }
+      body { padding: 1.5rem; }
       .nav-bottom { gap: 2.5rem; }
-      .hero { padding-top: 15vh; }
     }
   </style>
 </head>
 <body>
+
 
   <header>
     <span class="location" data-es="Buenos Aires, Argentina" data-en="Buenos Aires, Argentina">Buenos Aires, Argentina</span>
@@ -166,14 +162,17 @@
     </div>
   </header>
 
+
   <div class="hero">
     <h1>Joaquín Bernardis</h1>
     <p class="subtitle" data-es="Director de Cine" data-en="Film Director">Director de Cine</p>
   </div>
 
+
   <div class="nav-middle">
     <a href="trabajos.html" data-es="Trabajos" data-en="Work">Trabajos</a>
   </div>
+
 
   <nav class="nav-bottom">
     <a href="sobre-mi.html" data-es="Sobre mí" data-en="About">Sobre mí</a>
