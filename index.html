@@ -16,13 +16,7 @@
       --border: rgba(255,255,255,0.08);
     }
 
-<<<<<<< Updated upstream
-    html, body {
-      height: 100%;
-    }
-=======
     html, body { height: 100%; }
->>>>>>> Stashed changes
 
     body {
       background: var(--bg);
@@ -37,11 +31,7 @@
 
     a { color: inherit; text-decoration: none; }
 
-<<<<<<< Updated upstream
-    /*Top Bar*/
-=======
     /* Top Bar */
->>>>>>> Stashed changes
     header {
       display: flex;
       justify-content: space-between;
@@ -78,11 +68,7 @@
     .lang-btn.active { color: var(--fg); }
     .lang-btn:hover { color: var(--fg); }
 
-<<<<<<< Updated upstream
-    /*Hero*/
-=======
     /* Hero */
->>>>>>> Stashed changes
     .hero {
       display: flex;
       flex-direction: column;
@@ -90,11 +76,8 @@
       justify-content: center;
       text-align: center;
       gap: 0.6rem;
-<<<<<<< Updated upstream
-=======
       transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
       will-change: transform;
->>>>>>> Stashed changes
     }
 
     h1 {
@@ -108,7 +91,6 @@
       animation: fadeUp 0.9s ease 0.1s forwards;
     }
 
-     /*Director de cine*/
     .subtitle {
       font-size: 13px;
       letter-spacing: 0.35em;
@@ -118,22 +100,15 @@
       animation: fadeUp 0.9s ease 0.25s forwards;
     }
 
-<<<<<<< Updated upstream
-    /*(Trabajos)*/
-=======
     /* Nav Trabajos */
->>>>>>> Stashed changes
     .nav-middle {
       display: flex;
       justify-content: center;
       padding: 1rem 0 1rem;
       opacity: 0;
       animation: fadeUp 0.9s ease 0.4s forwards;
-<<<<<<< Updated upstream
-=======
       transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease, height 0.5s ease, padding 0.5s ease;
       will-change: transform;
->>>>>>> Stashed changes
     }
 
     .nav-middle a {
@@ -146,30 +121,18 @@
 
     .nav-middle a:hover { color: var(--fg); }
 
-<<<<<<< Updated upstream
-    /* (Sobre mí / Contacto) */
-=======
     /* Nav Bottom */
->>>>>>> Stashed changes
     .nav-bottom {
       display: flex;
       justify-content: center;
       gap: 4rem;
-<<<<<<< Updated upstream
-      padding-bottom: 12vh; /* <-- Aumentamos este valor (antes 2.5rem) para subir los menús */
-=======
       padding-bottom: 12vh;
->>>>>>> Stashed changes
       opacity: 0;
       animation: fadeUp 0.9s ease 0.5s forwards;
     }
 
     .nav-bottom a {
-<<<<<<< Updated upstream
-      font-size: clamp(1rem, 2.5vw, 1.4rem); /* <-- Ahora es exactamente igual a .nav-middle a */
-=======
       font-size: clamp(1rem, 2.5vw, 1.4rem);
->>>>>>> Stashed changes
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--muted);
@@ -188,50 +151,15 @@
       .nav-bottom { gap: 2.5rem; }
     }
 
-<<<<<<< Updated upstream
-    /* --- ANIMACIONES Y ESTILOS PARA LA SECCIÓN DE TRABAJOS --- */
-    
-    /* Preparamos el hero y el menú para que se animen suavemente */
-    .hero, .nav-middle {
-      transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease, height 0.5s ease, padding 0.5s ease;
-      will-change: transform;
-    }
-
-    /* Contenedor de videos oculto por defecto */
-=======
     /* =============================================
        SECCIÓN DE TRABAJOS
     ============================================= */
 
->>>>>>> Stashed changes
     .videos-container {
       opacity: 0;
       visibility: hidden;
       height: 0;
       overflow: hidden;
-<<<<<<< Updated upstream
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crea columnas responsivas */
-      gap: 2rem;
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto;
-      transition: opacity 0.8s ease 0.4s; /* Aparece con un ligero retraso */
-    }
-
-    /* Truco para que los iframes de YouTube mantengan el formato 16:9 */
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%; 
-      height: 0;
-    }
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-=======
       width: 100%;
       transition: opacity 0.6s ease 0.3s;
     }
@@ -370,21 +298,10 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
->>>>>>> Stashed changes
       border-radius: 4px;
       border: 1px solid var(--border);
     }
 
-<<<<<<< Updated upstream
-    /* --- CLASES ACTIVAS CUANDO HACEMOS CLIC EN TRABAJOS --- */
-    body.view-trabajos .hero {
-      transform: translateY(-5vh) scale(0.85); /* Sube un poco y se achica levemente */
-      margin-bottom: -5vh; 
-    }
-
-    body.view-trabajos .nav-middle {
-      opacity: 0;
-=======
     /* Info panel lateral */
     .info-panel {
       width: 240px;
@@ -475,7 +392,6 @@
 
     body.view-trabajos .nav-middle {
       opacity: 0 !important;
->>>>>>> Stashed changes
       pointer-events: none;
       height: 0;
       padding: 0;
@@ -487,22 +403,15 @@
       height: auto;
       padding-top: 2rem;
       padding-bottom: 2rem;
-<<<<<<< Updated upstream
-=======
       display: flex;
       flex-direction: column;
       justify-content: center;
       min-height: 45vh;
->>>>>>> Stashed changes
     }
   </style>
 </head>
 <body>
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
   <header>
     <span class="location" data-es="Buenos Aires, Argentina" data-en="Buenos Aires, Argentina">Buenos Aires, Argentina</span>
     <div class="lang-toggle">
@@ -511,34 +420,11 @@
     </div>
   </header>
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
   <div class="hero">
     <h1>Joaquín Bernardis</h1>
     <p class="subtitle" data-es="Director de Cine" data-en="Film Director">Director de Cine</p>
   </div>
 
-<<<<<<< Updated upstream
-
-  <div class="nav-middle">
-    <a href="#" id="btn-trabajos" data-es="Trabajos" data-en="Work">Trabajos</a>
-  </div>
-
-  <div class="videos-container" id="seccion-videos">
-    
-    <div class="video-wrapper">
-  <iframe src="https://player.vimeo.com/video/1184653363?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" title="En la mira" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-<div class="video-wrapper">
-  <iframe src="https://player.vimeo.com/video/1184652977?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" title="El precio de la libertad" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-  </div>
-
-=======
   <div class="nav-middle">
     <a href="#" id="btn-trabajos" data-es="Trabajos" data-en="Work">Trabajos</a>
   </div>
@@ -657,7 +543,6 @@
   </div>
   <!-- ===== FIN SECCIÓN TRABAJOS ===== -->
 
->>>>>>> Stashed changes
   <nav class="nav-bottom">
     <a href="sobre-mi.html" data-es="Sobre mí" data-en="About">Sobre mí</a>
     <a href="contacto.html" data-es="Contacto" data-en="Contact">Contacto</a>
@@ -677,15 +562,6 @@
     const saved = localStorage.getItem('lang') || 'es';
     if (saved === 'en') setLang('en');
 
-<<<<<<< Updated upstream
-    // Lógica para el botón "Trabajos"
-    const btnTrabajos = document.getElementById('btn-trabajos');
-    
-    btnTrabajos.addEventListener('click', function(event) {
-      event.preventDefault(); // Evita que la página intente saltar hacia arriba
-      document.body.classList.add('view-trabajos'); // Agrega la clase que detona las animaciones CSS
-    });
-=======
     // Botón "Trabajos"
     document.getElementById('btn-trabajos').addEventListener('click', function(e) {
       e.preventDefault();
@@ -719,7 +595,6 @@
       });
       document.getElementById('seccion-videos').classList.remove('panel-abierto');
     }
->>>>>>> Stashed changes
   </script>
 
 </body>
