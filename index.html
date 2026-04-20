@@ -16,9 +16,13 @@
       --border: rgba(255,255,255,0.08);
     }
 
+<<<<<<< Updated upstream
     html, body {
       height: 100%;
     }
+=======
+    html, body { height: 100%; }
+>>>>>>> Stashed changes
 
     body {
       background: var(--bg);
@@ -33,7 +37,11 @@
 
     a { color: inherit; text-decoration: none; }
 
+<<<<<<< Updated upstream
     /*Top Bar*/
+=======
+    /* Top Bar */
+>>>>>>> Stashed changes
     header {
       display: flex;
       justify-content: space-between;
@@ -70,7 +78,11 @@
     .lang-btn.active { color: var(--fg); }
     .lang-btn:hover { color: var(--fg); }
 
+<<<<<<< Updated upstream
     /*Hero*/
+=======
+    /* Hero */
+>>>>>>> Stashed changes
     .hero {
       display: flex;
       flex-direction: column;
@@ -78,10 +90,15 @@
       justify-content: center;
       text-align: center;
       gap: 0.6rem;
+<<<<<<< Updated upstream
+=======
+      transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
+      will-change: transform;
+>>>>>>> Stashed changes
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Cormorant', serif;
       font-style: italic;
       font-size: clamp(3.5rem, 10vw, 9rem);
       font-weight: 400;
@@ -101,13 +118,22 @@
       animation: fadeUp 0.9s ease 0.25s forwards;
     }
 
+<<<<<<< Updated upstream
     /*(Trabajos)*/
+=======
+    /* Nav Trabajos */
+>>>>>>> Stashed changes
     .nav-middle {
       display: flex;
       justify-content: center;
       padding: 1rem 0 1rem;
       opacity: 0;
       animation: fadeUp 0.9s ease 0.4s forwards;
+<<<<<<< Updated upstream
+=======
+      transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease, height 0.5s ease, padding 0.5s ease;
+      will-change: transform;
+>>>>>>> Stashed changes
     }
 
     .nav-middle a {
@@ -120,18 +146,30 @@
 
     .nav-middle a:hover { color: var(--fg); }
 
+<<<<<<< Updated upstream
     /* (Sobre mí / Contacto) */
+=======
+    /* Nav Bottom */
+>>>>>>> Stashed changes
     .nav-bottom {
       display: flex;
       justify-content: center;
       gap: 4rem;
+<<<<<<< Updated upstream
       padding-bottom: 12vh; /* <-- Aumentamos este valor (antes 2.5rem) para subir los menús */
+=======
+      padding-bottom: 12vh;
+>>>>>>> Stashed changes
       opacity: 0;
       animation: fadeUp 0.9s ease 0.5s forwards;
     }
 
     .nav-bottom a {
+<<<<<<< Updated upstream
       font-size: clamp(1rem, 2.5vw, 1.4rem); /* <-- Ahora es exactamente igual a .nav-middle a */
+=======
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+>>>>>>> Stashed changes
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--muted);
@@ -150,6 +188,7 @@
       .nav-bottom { gap: 2.5rem; }
     }
 
+<<<<<<< Updated upstream
     /* --- ANIMACIONES Y ESTILOS PARA LA SECCIÓN DE TRABAJOS --- */
     
     /* Preparamos el hero y el menú para que se animen suavemente */
@@ -159,11 +198,18 @@
     }
 
     /* Contenedor de videos oculto por defecto */
+=======
+    /* =============================================
+       SECCIÓN DE TRABAJOS
+    ============================================= */
+
+>>>>>>> Stashed changes
     .videos-container {
       opacity: 0;
       visibility: hidden;
       height: 0;
       overflow: hidden;
+<<<<<<< Updated upstream
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crea columnas responsivas */
       gap: 2rem;
@@ -185,10 +231,151 @@
       left: 0;
       width: 100%;
       height: 100%;
+=======
+      width: 100%;
+      transition: opacity 0.6s ease 0.3s;
+    }
+
+    /* Grid de thumbnails */
+    .thumbnails-grid {
+      display: grid;
+      grid-template-columns: 320px 320px;
+      gap: 1.5rem;
+      margin: 0 auto;
+      width: fit-content;
+    }
+
+    .thumbnail-card {
+      width: 320px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .thumbnail-card:hover {
+      border-color: rgba(255,255,255,0.25);
+      transform: translateY(-3px);
+    }
+
+    .thumbnail-card img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Overlay play */
+    .thumbnail-card .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .thumbnail-card:hover .play-overlay { opacity: 1; }
+
+    .play-overlay svg {
+      width: 52px;
+      height: 52px;
+      opacity: 0.9;
+    }
+
+    /* Título "Trabajos" sobre el grid */
+    .trabajos-titulo {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    /* Wrapper centrado que agrupa título + grid */
+    .thumbnails-wrapper {
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    .videos-container.panel-abierto {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .videos-container.panel-abierto .thumbnails-wrapper {
+      display: none;
+    }
+
+    /* Flecha volver */
+    .btn-volver {
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--muted);
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0 0 1.2rem 0;
+      transition: color 0.2s;
+    }
+
+    .btn-volver:hover { color: var(--fg); }
+
+    .btn-volver svg {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.2s;
+    }
+
+    .btn-volver:hover svg { transform: translateX(-3px); }
+
+    .videos-container.panel-abierto .btn-volver {
+      display: flex;
+    }
+
+    /* Panel expandido */
+    .expanded-panel {
+      display: none;
+      gap: 2rem;
+      align-items: flex-start;
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    .expanded-panel.active {
+      display: grid;
+      grid-template-columns: 1fr auto;
+    }
+
+    /* Player */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      flex: 1;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+>>>>>>> Stashed changes
       border-radius: 4px;
       border: 1px solid var(--border);
     }
 
+<<<<<<< Updated upstream
     /* --- CLASES ACTIVAS CUANDO HACEMOS CLIC EN TRABAJOS --- */
     body.view-trabajos .hero {
       transform: translateY(-5vh) scale(0.85); /* Sube un poco y se achica levemente */
@@ -197,6 +384,98 @@
 
     body.view-trabajos .nav-middle {
       opacity: 0;
+=======
+    /* Info panel lateral */
+    .info-panel {
+      width: 240px;
+      flex-shrink: 0;
+      border-left: 1px solid var(--border);
+      padding-left: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .info-panel h2 {
+      font-family: 'Cormorant', serif;
+      font-style: italic;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 0.2rem;
+    }
+
+    .info-sinopsis {
+      font-size: 12px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .info-credits {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .credit-row {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .credit-label {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .credit-value {
+      font-size: 12px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* Botón cerrar */
+    .btn-cerrar {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      padding: 0;
+      transition: color 0.2s;
+    }
+
+    .btn-cerrar:hover { color: var(--fg); }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      .expanded-panel.active {
+        grid-template-columns: 1fr;
+      }
+      .info-panel {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-left: 0;
+        padding-top: 1.2rem;
+      }
+    }
+
+    /* Estados activos */
+    body.view-trabajos .hero {
+      transform: translateY(-5vh) scale(0.85);
+      margin-bottom: -5vh;
+    }
+
+    body.view-trabajos .nav-middle {
+      opacity: 0 !important;
+>>>>>>> Stashed changes
       pointer-events: none;
       height: 0;
       padding: 0;
@@ -208,12 +487,22 @@
       height: auto;
       padding-top: 2rem;
       padding-bottom: 2rem;
+<<<<<<< Updated upstream
+=======
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 45vh;
+>>>>>>> Stashed changes
     }
   </style>
 </head>
 <body>
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
   <header>
     <span class="location" data-es="Buenos Aires, Argentina" data-en="Buenos Aires, Argentina">Buenos Aires, Argentina</span>
     <div class="lang-toggle">
@@ -222,12 +511,16 @@
     </div>
   </header>
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
   <div class="hero">
     <h1>Joaquín Bernardis</h1>
     <p class="subtitle" data-es="Director de Cine" data-en="Film Director">Director de Cine</p>
   </div>
 
+<<<<<<< Updated upstream
 
   <div class="nav-middle">
     <a href="#" id="btn-trabajos" data-es="Trabajos" data-en="Work">Trabajos</a>
@@ -245,12 +538,133 @@
 
   </div>
 
+=======
+  <div class="nav-middle">
+    <a href="#" id="btn-trabajos" data-es="Trabajos" data-en="Work">Trabajos</a>
+  </div>
+
+  <!-- ===== SECCIÓN TRABAJOS ===== -->
+  <div class="videos-container" id="seccion-videos">
+
+    <button class="btn-volver" onclick="cerrarVideo()">
+      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span data-es="Trabajos" data-en="Work">Trabajos</span>
+    </button>
+
+    <div class="thumbnails-wrapper">
+      <span class="trabajos-titulo" data-es="Trabajos" data-en="Work">Trabajos</span>
+
+      <!-- Grid de thumbnails -->
+      <div class="thumbnails-grid">
+
+        <div class="thumbnail-card" onclick="abrirVideo('en-la-mira')">
+          <img src="img/en-la-mira.png" alt="En la mira">
+          <div class="play-overlay">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="26" cy="26" r="25" stroke="white" stroke-width="1.5"/>
+              <polygon points="21,17 38,26 21,35" fill="white"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="thumbnail-card" onclick="abrirVideo('el-precio-de-la-libertad')">
+          <img src="img/el-precio-de-la-libertad.png" alt="El precio de la libertad">
+          <div class="play-overlay">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="26" cy="26" r="25" stroke="white" stroke-width="1.5"/>
+              <polygon points="21,17 38,26 21,35" fill="white"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Panel expandido: En la mira -->
+    <div class="expanded-panel" id="panel-en-la-mira">
+      <div class="video-wrapper">
+        <iframe src="https://player.vimeo.com/video/1184653363?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0"
+          frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="info-panel">
+        <div>
+          <h2>En la mira</h2>
+        </div>
+        <p class="info-sinopsis">
+          <!-- SINOPSIS: reemplazá este texto con la sinopsis del corto -->
+          Sinopsis del corto...
+        </p>
+        <div class="info-credits">
+          <div class="credit-row">
+            <span class="credit-label" data-es="Dirección" data-en="Direction">Dirección</span>
+            <span class="credit-value"><!-- Nombre del director --></span>
+          </div>
+          <div class="credit-row">
+            <span class="credit-label" data-es="Guión" data-en="Screenplay">Guión</span>
+            <span class="credit-value"><!-- Nombre del guionista --></span>
+          </div>
+          <div class="credit-row">
+            <span class="credit-label" data-es="Producción" data-en="Production">Producción</span>
+            <span class="credit-value"><!-- Nombre del productor --></span>
+          </div>
+          <div class="credit-row">
+            <span class="credit-label" data-es="Fotografía" data-en="Cinematography">Fotografía</span>
+            <span class="credit-value"><!-- Director de fotografía --></span>
+          </div>
+          <!-- Podés agregar más filas copiando el bloque .credit-row -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel expandido: El precio de la libertad -->
+    <div class="expanded-panel" id="panel-el-precio-de-la-libertad">
+      <div class="video-wrapper">
+        <iframe src="https://player.vimeo.com/video/1184652977?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0"
+          frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="info-panel">
+        <div>
+          <h2>El precio de la libertad</h2>
+        </div>
+        <p class="info-sinopsis">
+          <!-- SINOPSIS: reemplazá este texto con la sinopsis del corto -->
+          Sinopsis del corto...
+        </p>
+        <div class="info-credits">
+          <div class="credit-row">
+            <span class="credit-label" data-es="Dirección" data-en="Direction">Dirección</span>
+            <span class="credit-value"><!-- Nombre del director --></span>
+          </div>
+          <div class="credit-row">
+            <span class="credit-label" data-es="Guión" data-en="Screenplay">Guión</span>
+            <span class="credit-value"><!-- Nombre del guionista --></span>
+          </div>
+          <div class="credit-row">
+            <span class="credit-label" data-es="Producción" data-en="Production">Producción</span>
+            <span class="credit-value"><!-- Nombre del productor --></span>
+          </div>
+          <div class="credit-row">
+            <span class="credit-label" data-es="Fotografía" data-en="Cinematography">Fotografía</span>
+            <span class="credit-value"><!-- Director de fotografía --></span>
+          </div>
+          <!-- Podés agregar más filas copiando el bloque .credit-row -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- ===== FIN SECCIÓN TRABAJOS ===== -->
+
+>>>>>>> Stashed changes
   <nav class="nav-bottom">
     <a href="sobre-mi.html" data-es="Sobre mí" data-en="About">Sobre mí</a>
     <a href="contacto.html" data-es="Contacto" data-en="Contact">Contacto</a>
   </nav>
 
   <script>
+    // Idioma
     function setLang(lang) {
       localStorage.setItem('lang', lang);
       document.querySelectorAll('[data-es]').forEach(el => {
@@ -263,6 +677,7 @@
     const saved = localStorage.getItem('lang') || 'es';
     if (saved === 'en') setLang('en');
 
+<<<<<<< Updated upstream
     // Lógica para el botón "Trabajos"
     const btnTrabajos = document.getElementById('btn-trabajos');
     
@@ -270,6 +685,41 @@
       event.preventDefault(); // Evita que la página intente saltar hacia arriba
       document.body.classList.add('view-trabajos'); // Agrega la clase que detona las animaciones CSS
     });
+=======
+    // Botón "Trabajos"
+    document.getElementById('btn-trabajos').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.body.classList.add('view-trabajos');
+    });
+
+    // Abrir video
+    function abrirVideo(id) {
+      cerrarVideo(); // detiene cualquier video previo
+      const contenedor = document.getElementById('seccion-videos');
+      const panel = document.getElementById('panel-' + id);
+      if (panel) {
+        contenedor.classList.add('panel-abierto');
+        panel.classList.add('active');
+        contenedor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // Cerrar video — detiene el iframe reseteando el src
+    function cerrarVideo() {
+      document.querySelectorAll('.expanded-panel').forEach(p => {
+        if (p.classList.contains('active')) {
+          const iframe = p.querySelector('iframe');
+          if (iframe) {
+            const src = iframe.src;
+            iframe.src = '';
+            iframe.src = src;
+          }
+          p.classList.remove('active');
+        }
+      });
+      document.getElementById('seccion-videos').classList.remove('panel-abierto');
+    }
+>>>>>>> Stashed changes
   </script>
 
 </body>
