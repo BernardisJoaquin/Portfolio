@@ -16,18 +16,16 @@
       --border: rgba(255,255,255,0.08);
     }
 
-    html, body { height: 100%; }
-
     body {
-      background: var(--bg);
-      color: var(--fg);
-      font-family: 'Inter', sans-serif;
-      font-weight: 300;
-      min-height: 100vh;
-      display: grid;
-      grid-template-rows: auto 1fr auto auto;
-      padding: 2rem 2.5rem;
-    }
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2.5rem;
+}
 
     a { color: inherit; text-decoration: none; }
 
@@ -70,15 +68,16 @@
 
     /* Hero */
     .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      gap: 0.6rem;
-      transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
-      will-change: transform;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.6rem;
+  flex: 1; /* Esta es la línea clave */
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
+  will-change: transform;
+}
 
     h1 {
       font-family: 'Cormorant', serif;
